@@ -1,4 +1,15 @@
-# DistributedElixir
+# Distributed Elixir example app
+
+## Versions
+
+This project is made using:
+- Elixir 1.5.0-rc1
+- Erlang 20.0
+- NodeJS 8.1.4
+
+There is a `.tool-versions` with the versions needed to install them using [asdf](https://github.com/asdf-vm/asdf) version manager
+
+## Start the project
 
 To start your Phoenix server:
 
