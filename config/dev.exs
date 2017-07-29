@@ -1,5 +1,13 @@
 use Mix.Config
 
+port_number = with value <- System.get_env("PORT"),
+                   false <- is_nil(value),
+                   {number, _} <- Integer.parse(value) do
+    number
+  else
+    _ -> 4000
+  end
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -7,7 +15,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :distributed_elixir, DistributedElixir.Web.Endpoint,
-  http: [port: 4000],
+  http: [port: port_number],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
