@@ -16,7 +16,7 @@ defmodule DistributedElixir.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {DistributedElixir.Application, []},
-     extra_applications: [:logger, :runtime_tools]]
+     extra_applications: [:wobserver, :logger, :runtime_tools]]
   end
 
   # Specifies which paths to compile per environment.
@@ -32,6 +32,7 @@ defmodule DistributedElixir.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:wobserver, "~> 0.1"}]
   end
 end

@@ -2,6 +2,7 @@ defmodule DistributedElixir.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :distributed_elixir
 
   socket "/socket", DistributedElixir.Web.UserSocket
+  socket "/wobserver", Wobserver.Web.PhoenixSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #

@@ -17,7 +17,10 @@ defmodule DistributedElixir.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
   end
+
+  forward "/wobserver", Wobserver.Web.Router
 
   # Other scopes may use custom stacks.
   # scope "/api", DistributedElixir.Web do
